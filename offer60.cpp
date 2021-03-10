@@ -15,10 +15,8 @@ public:
         vector<vector<int>> dp;
 
         //初始化n=1的情况
-        dp.push_back(vector<int>{6,0});
-        for(auto elem:dp[0]){
-            elem = 1;
-        }
+        dp.push_back(vector<int>(6,0));
+		for (int i = 0; i < dp[0].size(); i++) dp[0][i] = 1;
 
         //然后开始根据n，基于公式逐个计算
         for(int k = 1;k<n;k++){

@@ -25,7 +25,7 @@ public:
 
         //然后依次压栈
         for(int i = k;i<nums.size();i++){
-            if(nums[i-1]==sta.front()) sta.pop_front();
+            if(nums[i-k]==sta.front()) sta.pop_front();
 
             while((!sta.empty())&&nums[i]>sta.back()) sta.pop_back();
             sta.push_back(nums[i]);
