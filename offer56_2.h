@@ -26,8 +26,8 @@ public:
 		int res = 0;
 		for(int i =31;i>=0;i--)
 		{
-			res += bits[i] % 3;
 			res = res << 1;
+			res += bits[i] % 3;
 		}
 
 		return res;
